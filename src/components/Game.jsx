@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { ReseteBtn } from './ResetBtn';
 import GameFeeld from './GameFeeld';
 import { useNavigate } from 'react-router-dom';
+import gettranslation from "../utils/gettranslation"
 
-export default function Game({ setPlayerSymbol, currentplayer }) {
+export default function Game({ setPlayerSymbol, currentplayer, getlang }) {
   /* NOTE redirect to start, when no play is selected */
   const Navigate = useNavigate()
 
@@ -43,14 +44,14 @@ export default function Game({ setPlayerSymbol, currentplayer }) {
 
     winchances.forEach(([a, b, c]) => {
       if (game[a] && game[a] === game[b] && game[a] === game[c]) {
-        setend("Der Gewinner ist " + game[a])
+        setend(gettranslation(getlang, "win") + game[a])
         setwin([a, b, c])
         return
       }
     });
 
     if (!game.includes(null)) {
-      setend("Unentschieden")
+      setend(gettranslation(getlang, "draw"))
     }
   }, [getgame])
 
@@ -82,6 +83,8 @@ export default function Game({ setPlayerSymbol, currentplayer }) {
           setend={setend}
           setwin={setwin}
           setPlayerSymbol={setPlayerSymbol}
+          gettranslation={gettranslation}
+          getlang={getlang}
         />}
 
     </article>

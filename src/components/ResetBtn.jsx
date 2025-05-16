@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 
-export const ReseteBtn = ({ setgame, setend, setwin, setPlayerSymbol }) => {
+export const ReseteBtn = ({ setgame, setend, setwin, setPlayerSymbol, gettranslation, getlang }) => {
   /* NOTE reset the game and send the player to the start */
   const Navigate = useNavigate()
   const neuGame = () => Navigate("/")
@@ -14,5 +14,5 @@ export const ReseteBtn = ({ setgame, setend, setwin, setPlayerSymbol }) => {
     setPlayerSymbol(null)
   }
 
-  return <button onClick={resetgame}  >Starte ein neues Spiel</button>
+  return <button onClick={resetgame}  >{gettranslation(getlang, "newgame")}</button>
 }
