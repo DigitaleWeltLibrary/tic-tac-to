@@ -33,7 +33,7 @@ npm install
 ```
 - you are ready to start the game
 ```bash
-npm start
+npm run dev
 ```
 
 ## Used techniques
