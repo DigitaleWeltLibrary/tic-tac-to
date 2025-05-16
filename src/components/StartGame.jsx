@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom"
 import { faCircleNotch, faQuestion, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ChangeLang from "./ChangeLang";
+import gettranslation from "../utils/gettranslation"
 
-export default function StartGame({ setPlayerSymbol, currentplayer }) {
+export default function StartGame({ setPlayerSymbol, currentplayer, changelanguage, getlang }) {
 
     /* NOTE change the player symbol */
     const changePlayer = () => {
@@ -17,25 +19,31 @@ export default function StartGame({ setPlayerSymbol, currentplayer }) {
     const sendToGame = () => { Navigate("/game"); };
 
     return (
-        <article className="start">
-            <h1>Starte ein Spiel</h1>
-            <p>Welche Figur will Spieler 1 sein?</p>
-            <button onClick={changePlayer} className="player">
-                <FontAwesomeIcon
-                    icon={
-                        currentplayer == null
-                            ? faQuestion
-                            : (currentplayer === "X" ? faXmark : faCircleNotch)
-                    }
-                    color='#72a24d'
-                    size='2xl'
-                />
-            </button>
+        <>
+            <ChangeLang
+                changelanguage={changelanguage}
+                getlang={getlang}
+            />
+            <article className="start">
+                <h1>{gettranslation(getlang, "start")}</h1>
+                <p>{gettranslation(getlang, "character")}</p>
+                <button onClick={changePlayer} className="player">
+                    <FontAwesomeIcon
+                        icon={
+                            currentplayer == null
+                                ? faQuestion
+                                : (currentplayer === "X" ? faXmark : faCircleNotch)
+                        }
+                        color='#72a24d'
+                        size='2xl'
+                    />
+                </button>
 
-            <button
-                disabled={currentplayer === null}
-                onClick={sendToGame}
-            >Spiel Starten</button>
-        </article>
+                <button
+                    disabled={currentplayer === null}
+                    onClick={sendToGame}
+                >{gettranslation(getlang, "startbtn")}</button>
+            </article>
+        </>
     )
 }
