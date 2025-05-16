@@ -1,0 +1,18 @@
+{
+    "de": {
+        "start": "Starte ein Spiel",
+        "character": "Spieler eins wähle einen Spielfigur",
+        "startbtn": "Spiel Starten",
+        "draw": "Unentschieden",
+        "win": "Der Gewinner ist ",
+        "newgame": "Starte ein neues Spiel"
+    },
+    "en": {
+        "start": "start a game",
+        "character": "Player one chooses a playing piece",
+        "startbtn": "ready to play",
+        "draw": "Draw",
+        "win": "The winner is ",
+        "newgame": "start a new game"
+    }
+}
