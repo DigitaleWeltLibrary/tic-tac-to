@@ -43,3 +43,12 @@ npm start
 
 ### Have fun with the game
 
+## Versions
+
+### Version 1
+
+The initial release of the Tic-Tac-Toe game, featuring complete game functionality. Players can play against each other, and the game handles turns, win conditions, and draws.
+
+### Version 2
+
+Introduced the ability for users to switch between German and English language within the game interface. The selected language preference is now stored in the browser's local storage, ensuring that the chosen language persists across sessions.
