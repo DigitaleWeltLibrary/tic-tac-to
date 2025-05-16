@@ -1,12 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Game from "./components/Game";
 import StartGame from "./components/StartGame";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './style/main.scss'
 
 export default function App() {
     /* NOTE is the language of the game */
-    const [getlang, setlang] = useState('en')
+    const [getlang, setlang] = useState(() => {
+        const lang = localStorage.getItem('tictactolanguage')
+        return lang ? lang : 'en'
+    })
+
+    /* NOTE useEffect to set the language of the game to localstorage */
+    useEffect(() => {
+        localStorage.setItem('tictactolanguage', getlang);
+    }, [getlang]);
 
     /* NOTE changes the language of the game */
     const changelanguage = () => setlang(prevLang => prevLang === 'en' ? 'de' : 'en')
