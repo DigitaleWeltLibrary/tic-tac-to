@@ -33,6 +33,18 @@ body {
     min-width: 150px;
     text-align: center;
 
+    &.changelange {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      margin: 0;
+      border-radius: 0 0 0 1rem;
+      border-color: transparent transparent #72a24d #72a24d;
+      min-width: unset;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
 
 
     &:disabled {
