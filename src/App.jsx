@@ -4,6 +4,7 @@ import StartGame from "./components/StartGame";
 import { useEffect, useState } from "react";
 import "./style/main.scss";
 import ChangeLang from "./components/ChangeLang";
+import "./style/fonts.scss";
 
 export default function App() {
   /* NOTE is the language of the game */
