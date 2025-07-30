@@ -10,7 +10,7 @@ Tic Tac To is a two player game. One player plays as X and the other as O. To wi
 
 When you start the application, you will see options to choose the symbol for player one. 
 
-![start a game](images/start.png)
+![alt text](images/start.png)
 
 After selecting the symbol you can submit to the game.
 
@@ -52,3 +52,7 @@ The initial release of the Tic-Tac-Toe game, featuring complete game functionali
 ### Version 2
 
 Introduced the ability for users to switch between German and English language within the game interface. The selected language preference is now stored in the browser's local storage, ensuring that the chosen language persists across sessions.
+
+### Version 3
+
+The ability to change the game language during play has been added. The game start screen design has been simplified. During play, text is now displayed indicating the player whose turn it is.
