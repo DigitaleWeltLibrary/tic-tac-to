@@ -5,7 +5,8 @@
         "startbtn": "Spiel Starten",
         "draw": "Unentschieden",
         "win": "Der Gewinner ist ",
-        "newgame": "Starte ein neues Spiel"
+        "newgame": "Starte ein neues Spiel",
+        "currentplayer": "Aktueller Spieler"
     },
     "en": {
         "start": "start a game",
@@ -13,6 +14,7 @@
         "startbtn": "ready to play",
         "draw": "Draw",
         "win": "The winner is ",
-        "newgame": "start a new game"
+        "newgame": "start a new game",
+        "currentplayer": "Current player"
     }
 }
