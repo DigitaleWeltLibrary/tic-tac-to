@@ -70,9 +70,12 @@ export default function Game({ setPlayerSymbol, currentplayer, getlang }) {
   return (
     <article>
       <h1>{gameend ?? "Tic Tac To"}</h1>
-      <p>
-        {gettranslation(getlang, "currentplayer")}: {currentplayer}
-      </p>
+      {gameend == null ? (
+        <p>
+          {gettranslation(getlang, "currentplayer")}: {currentplayer}
+        </p>
+      ) : null}
+
       <article className="game">
         {getgame.map((field, index) => (
           <GameFeeld
